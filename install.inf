@@ -3,6 +3,7 @@ title=YAML Format
 desc=Formats YAML code (using pyyaml library)
 type=cudatext-plugin
 subdir=cuda_yaml_format
+homepage=https://github.com/CudaText-addons/cuda_yaml_format
 
 [item1]
 section=commands
