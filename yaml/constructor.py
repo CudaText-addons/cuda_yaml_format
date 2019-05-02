@@ -249,10 +249,9 @@ class SafeConstructor(BaseConstructor):
             return sign*int(value)
 
     inf_value = 1e300
-    nan_value = 1e400
-#    while inf_value != inf_value*inf_value:
-#        inf_value *= inf_value
-#    nan_value = -inf_value/inf_value   # Trying to make a quiet NaN (like C99).
+    while inf_value != inf_value*inf_value:
+        inf_value *= inf_value
+    nan_value = -inf_value/inf_value   # Trying to make a quiet NaN (like C99).
 
     def construct_yaml_float(self, node):
         value = self.construct_scalar(node)
